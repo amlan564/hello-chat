@@ -31,11 +31,11 @@ const Profile = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="w-5/6 max-w-md bg-[#2e2e2f] text-gray-100 border-2 border-gray-600 rounded-lg">
+    <div className="min-h-screen flex items-center justify-center max-sm:py-10">
+      <div className="w-5/6 max-w-2xl max-sm:max-w-sm p-10 bg-[#2e2e2f] text-gray-100 flex max-sm:flex-col-reverse items-center justify-between gap-12 border-2 border-gray-600 rounded-lg">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-5 p-10 flex-1"
+          className="flex flex-col gap-5 flex-1"
         >
           <h3 className="text-lg flex items-center gap-2">
             <ChevronLeft
@@ -59,10 +59,10 @@ const Profile = () => {
                   src={
                     selectedImage
                       ? URL.createObjectURL(selectedImage)
-                      : authUser?.profilePic
+                      : avatar
                   }
                   alt=""
-                  className="w-20 h-20 object-cover rounded-full"
+                  className="max-sm:w-16 max-sm:h-16 w-20 h-20 object-cover rounded-full"
                 />
                 <div className="bg-violet-600 w-5 h-5 rounded-full flex items-center justify-center absolute bottom-0 right-0">
                   <Pen size={12} />
@@ -100,6 +100,9 @@ const Profile = () => {
             Save
           </button>
         </form>
+        <div>
+          <img src={authUser?.profilePic} alt="" className="max-sm:w-25 max-sm:h-25 w-40 h-40 rounded-full object-cover" />
+        </div>
       </div>
     </div>
   );
