@@ -30,7 +30,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen border-2 flex items-center justify-center gap-10 sm:justify-evenly max-sm:flex-col max-sm:px-10">
+    <div className="min-h-screen flex items-center justify-center gap-10 sm:justify-evenly max-sm:flex-col max-sm:px-10">
       {/* left */}
       <div className="flex flex-col items-center justify-center gap-2">
         <img src={chat} alt="" className="w-16" />
