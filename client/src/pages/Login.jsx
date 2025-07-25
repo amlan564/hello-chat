@@ -30,7 +30,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-cover bg-center flex items-center justify-center gap-10 sm:justify-evenly max-sm:flex-col backdrop-blur-2xl">
+    <div className="min-h-screen border-2 flex items-center justify-center gap-10 sm:justify-evenly max-sm:flex-col max-sm:px-10">
       {/* left */}
       <div className="flex flex-col items-center justify-center gap-2">
         <img src={chat} alt="" className="w-16" />
@@ -40,7 +40,7 @@ const Login = () => {
       {/* right */}
       <form
         onSubmit={handleSubmit}
-        className="border-2 bg-white/8 text-gray-100 border-gray-600 p-6 flex flex-col gap-6 rounded-lg shadow-lg min-w-md max-sm:min-w-sm"
+        className="border-2 bg-white/8 text-gray-100 border-gray-600 p-6 flex flex-col gap-6 rounded-lg shadow-lg w-sm max-sm:w-xs"
       >
         <h2 className="font-medium text-2xl flex justify-between items-center">
           {currentState}

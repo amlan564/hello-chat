@@ -33,18 +33,8 @@ const Profile = () => {
   return (
     <div className="min-h-screen flex items-center justify-center max-sm:py-10">
       <div className="w-5/6 max-w-2xl max-sm:max-w-sm p-10 bg-[#2e2e2f] text-gray-100 flex max-sm:flex-col-reverse items-center justify-between gap-12 border-2 border-gray-600 rounded-lg">
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-5 flex-1"
-        >
-          <h3 className="text-lg flex items-center gap-2">
-            <ChevronLeft
-              size={20}
-              className="cursor-pointer"
-              onClick={() => navigate("/")}
-            />
-            Profile Details
-          </h3>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5 flex-1">
+          <h3 className="text-lg">Profile Details</h3>
           <div>
             <label htmlFor="avatar" className="inline-block cursor-pointer">
               <input
@@ -57,9 +47,7 @@ const Profile = () => {
               <div className="relative text-center">
                 <img
                   src={
-                    selectedImage
-                      ? URL.createObjectURL(selectedImage)
-                      : avatar
+                    selectedImage ? URL.createObjectURL(selectedImage) : avatar
                   }
                   alt=""
                   className="max-sm:w-16 max-sm:h-16 w-20 h-20 object-cover rounded-full"
@@ -101,7 +89,11 @@ const Profile = () => {
           </button>
         </form>
         <div>
-          <img src={authUser?.profilePic} alt="" className="max-sm:w-25 max-sm:h-25 w-40 h-40 rounded-full object-cover" />
+          <img
+            src={authUser?.profilePic}
+            alt=""
+            className="max-sm:w-25 max-sm:h-25 w-40 h-40 rounded-full object-cover"
+          />
         </div>
       </div>
     </div>
